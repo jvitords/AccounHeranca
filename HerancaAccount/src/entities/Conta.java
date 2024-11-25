@@ -1,20 +1,18 @@
 package entities;
 
-public class Account {
+public class Conta {
 	
 	private String titular;
 	private Integer numeroDaconta;
-	private Double saldoDaConta;
+	protected Double saldoDaConta;
 	
-	public Account() {
-		System.out.println("qq");
+	public Conta() {
 	}
 
-	public Account(String titular, Integer numeroDaconta, Double saldoDaConta) {
+	public Conta(String titular, Integer numeroDaconta, Double saldoDaConta) {
 		this.titular = titular;
 		this.numeroDaconta = numeroDaconta;
 		this.saldoDaConta = saldoDaConta;
-		//System.out.println("qq");
 	}
 	
 	public String getTitular() {
@@ -43,7 +41,7 @@ public class Account {
 	}
 
 	public void sacar(Double valorDoSaque) {
-		saldoDaConta -= valorDoSaque;
+		saldoDaConta -= valorDoSaque + 5; // saque será cobrado taxa de R$5.0
 		System.out.println("Saque realizado!");
 	}
 }
